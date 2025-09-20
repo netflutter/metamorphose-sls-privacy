@@ -55,107 +55,390 @@
       border-left: 4px solid #3498db;
       font-style: italic;
     }
+
+    /* Sélecteur de langue */
+    .lang-switcher {
+      text-align: center;
+      margin: 20px 0;
+      padding: 10px;
+      background: #f0f7ff;
+      border-radius: 8px;
+    }
+    .lang-switcher button {
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 0 8px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: #555;
+    }
+    .lang-switcher button.active {
+      background: #3498db;
+      color: white;
+    }
+    .lang-section {
+      display: none;
+    }
+    .lang-section.active {
+      display: block;
+    }
+
+    /* Style RTL pour l'arabe */
+    .lang-section#ar-section {
+      direction: rtl;
+      text-align: right;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
   </style>
 </head>
 <body>
 
   <h1>Politique de confidentialité – Métamorphose SLS</h1>
-  <p><strong>Dernière mise à jour :</strong> 5 avril 2025</p>
+  <p><strong>Dernière mise à jour :</strong> 17 septembre 2025</p>
 
-  <h2>1. Introduction</h2>
-  <p>Bienvenue sur <strong>Métamorphose SLS</strong>, une application mobile conçue pour les membres de la salle de sport <strong>Santé Lifestyle (SLS)</strong> afin de suivre leur plan nutritionnel, scanner leur reçu d’abonnement et échanger avec leur coach. Cette politique explique comment nous collectons, utilisons et protégeons vos informations personnelles.</p>
-
-  <h2>2. Responsable du traitement</h2>
-  <p>Le responsable du traitement est <strong>Mohamed AOUFI</strong>, exerçant sous le nom commercial <strong>Métamorphose SLS</strong>.</p>
-  <p>Contact : <a href="mailto:metamorphosesls@gmail.com">metamorphosesls@gmail.com</a><br>
-  WhatsApp : <a href="https://wa.me/213561630667">+213 561 630 667</a></p>
-
-  <h2>3. Informations que nous collectons</h2>
-
-  <h3>Données fournies directement</h3>
-  <ul>
-    <li><strong>Nom</strong> – pour personnaliser votre expérience</li>
-    <li><strong>Adresse e-mail</strong> – pour l’authentification</li>
-    <li><strong>Numéro de téléphone</strong> – pour le support via WhatsApp (facultatif)</li>
-  </ul>
-
-  <h3>Données sensibles (facultatives)</h3>
-  <p>Vous pouvez choisir de partager des informations sur votre santé (ex : allergies, conditions médicales) pour ajuster votre plan nutritionnel. Ces données sont entièrement facultatives.</p>
-
-  <h3>Données techniques</h3>
-  <p>Nous collectons des données minimales via Firebase Cloud Messaging (FCM) pour les notifications push :</p>
-  <ul>
-    <li>Type d’appareil, système d’exploitation</li>
-    <li>Statut de livraison des notifications</li>
-  </ul>
-  <p>Aucune donnée de localisation n’est collectée.</p>
-
-  <h3>Contenu généré par l’utilisateur</h3>
-  <p>Vous pouvez :</p>
-  <ul>
-    <li>Scanner votre reçu de salle de sport</li>
-    <li>Prendre ou télécharger une photo de profil (avatar)</li>
-    <li>Uploader des photos de vos repas</li>
-  </ul>
-  <p>Ces photos sont envoyées directement à Supabase. Elles ne sont pas sauvegardées localement après l’envoi. Seul vous et votre coach pouvez y accéder.</p>
-
-  <h2>4. Utilisation des permissions</h2>
-  <ul>
-    <li><strong>Caméra</strong> : pour scanner les reçus et prendre des photos de repas.</li>
-    <li><strong>Stockage (galerie)</strong> : pour sélectionner une photo de profil.</li>
-  </ul>
-
-  <h2>5. Finalité du traitement</h2>
-  <p>Nous utilisons vos données pour :</p>
-  <ul>
-    <li>Valider votre abonnement à la salle de sport</li>
-    <li>Vous fournir un plan nutritionnel personnalisé</li>
-    <li>Permettre à votre coach de suivre votre progression</li>
-    <li>Envoyer des notifications push</li>
-  </ul>
-
-  <h2>6. Base juridique (RGPD)</h2>
-  <p>Nous nous appuyons sur :</p>
-  <ul>
-    <li><strong>Consentement</strong> : pour les notifications, la caméra, les données santé</li>
-    <li><strong>Exécution d’un contrat</strong> : pour fournir le service nutritionnel lié à votre abonnement</li>
-    <li><strong>Intérêts légitimes</strong> : pour améliorer l’app et prévenir les abus (ex : faux reçus)</li>
-  </ul>
-
-  <h2>7. Partage des données</h2>
-  <p>Nous ne vendons ni ne partageons vos données avec des tiers à des fins publicitaires. Vos photos et données sont accessibles uniquement par vous et votre coach. Les données sont stockées sur Supabase (serveurs aux États-Unis).</p>
-
-  <h2>8. Durée de conservation</h2>
-  <p>Vos données sont conservées aussi longtemps que vous utilisez l’application. Vous pouvez demander la suppression à tout moment.</p>
-
-  <h2>9. Suppression du compte</h2>
-  <p>Les utilisateurs ne peuvent pas supprimer leur compte directement dans l’app. Pour demander la suppression de votre compte et de vos données, contactez-nous à <a href="mailto:metamorphosesls@gmail.com">metamorphosesls@gmail.com</a> ou via WhatsApp.</p>
-
-  <h2>10. Droits des utilisateurs</h2>
-  <p>Vous avez le droit d’accéder, corriger ou supprimer vos données. Si vous êtes en Californie (CCPA), vous avez le droit de savoir quelles données sont collectées et de vous opposer à leur vente (nous ne vendons aucune donnée).</p>
-
-  <h2>11. Charte du groupe Métamorphose SLS</h2>
-  <ol>
-    <li><strong>Authenticité</strong> : Toute publicité personnelle ou promotion est interdite.</li>
-    <li><strong>Respect et bienveillance</strong> : Tout propos irrespectueux est interdit.</li>
-    <li><strong>Contenu pertinent</strong> : Ne partagez que des éléments liés au sport et à la nutrition.</li>
-    <li><strong>Entraide</strong> : Encouragez-vous mutuellement.</li>
-    <li><strong>Confidentialité</strong> : Ce qui est partagé dans le groupe reste dans le groupe.</li>
-    <li><strong>Interdiction d’ajout</strong> : Ajouter une personne sans accord est strictement interdit.</li>
-  </ol>
-
-  <h2>12. Disclaimer (Clause de non-responsabilité)</h2>
-  <div class="highlight">
-    Les conseils nutritionnels et d’entraînement fournis dans l’application sont à titre informatif. Ils ne remplacent pas un avis médical. Vous êtes responsable de votre santé. Aucune responsabilité ne peut être engagée en cas de dommage lié à l’utilisation des conseils.
+  <!-- Sélecteur de langue -->
+  <div class="lang-switcher">
+    <button onclick="switchLanguage('fr')" class="active" title="Français">🇫🇷</button>
+    <button onclick="switchLanguage('en')" title="English">🇬🇧</button>
+    <button onclick="switchLanguage('ar')" title="العربية">🇸🇦</button>
   </div>
 
-  <h2>13. Modifications de cette politique</h2>
-  <p>Nous vous informerons 7 jours avant toute modification majeure via une notification dans l’app. Les mises à jour prendront effet à la prochaine ouverture de l’app.</p>
+  <!-- ============ SECTION FRANÇAISE ============ -->
+  <div id="fr-section" class="lang-section active">
+    <h2>1. Introduction</h2>
+    <p>Bienvenue sur <strong>Métamorphose SLS</strong>, une application mobile conçue pour les membres de la salle de sport <strong>Santé Lifestyle (SLS)</strong>. Elle permet de suivre un plan nutritionnel, enregistrer ses progrès (poids, photos, mensurations), et échanger avec son coach. Cette politique explique comment nous collectons, utilisons et protégeons vos données personnelles.</p>
 
-  <div class="footer">
-    <p>© 2025 Métamorphose SLS. Tous droits réservés.</p>
-    <p><em>Application développée par Mohamed AOUFI pour Santé Lifestyle (SLS).</em></p>
+    <h2>2. Responsable du traitement</h2>
+    <p>Responsable : <strong>Mohamed AOUFI</strong> (Métamorphose SLS)<br>
+    📧 Email : <a href="mailto:metamorphosesls@gmail.com">metamorphosesls@gmail.com</a><br>
+    📱 WhatsApp : <a href="https://wa.me/213561630667">+213 561 630 667</a></p>
+
+    <h2>3. Données collectées</h2>
+    <h3>Données fournies par l’utilisateur</h3>
+    <ul>
+      <li><strong>Nom</strong> (obligatoire) – personnalisation de l’expérience</li>
+      <li><strong>Adresse e-mail</strong> (obligatoire) – authentification et connexion</li>
+      <li><strong>Âge</strong> (optionnel) – pour adapter certaines recommandations</li>
+      <li><strong>Genre</strong> (optionnel mais recommandé) – permet de personnaliser les conseils nutritionnels liés aux différences hormonales</li>
+      <li><strong>Numéro de téléphone</strong> (optionnel) – uniquement si l’utilisateur souhaite être contacté par son coach</li>
+      <li><strong>Groupe Métamorphose</strong> (obligatoire uniquement pour les utilisateurs inscrits à un programme collectif : max. 100–150 participants par groupe) – pour intégrer la communauté privée de suivi</li>
+    </ul>
+
+    <h3>Données sensibles (optionnelles)</h3>
+    <p>Allergies ou conditions médicales (si fournies par l’utilisateur) – utilisées uniquement pour personnaliser les recommandations nutritionnelles</p>
+
+    <h3>Données techniques</h3>
+    <ul>
+      <li>Type d’appareil, système d’exploitation</li>
+      <li>Statut de livraison des notifications push (via Firebase Cloud Messaging)</li>
+    </ul>
+    <p>👉 Aucune donnée de localisation n’est collectée</p>
+
+    <h3>Contenu généré par l’utilisateur</h3>
+    <ul>
+      <li>Photos de profil, repas, progression</li>
+      <li>Reçus d’abonnement (upload via caméra ou galerie)</li>
+    </ul>
+    <p>👉 Stockage sécurisé sur Supabase (serveurs aux États-Unis)<br>👉 Accessible uniquement par l’utilisateur et son coach</p>
+
+    <h2>4. Permissions utilisées</h2>
+    <ul>
+      <li><strong>Caméra</strong> : pour prendre des photos de repas, reçus, ou profil</li>
+      <li><strong>Galerie</strong> : pour sélectionner une image existante</li>
+      <li><strong>Notifications push</strong> : rappels et informations importantes</li>
+    </ul>
+
+    <h2>5. Finalité du traitement</h2>
+    <p>Vos données sont utilisées pour :</p>
+    <ul>
+      <li>Fournir un suivi nutritionnel et sportif personnalisé</li>
+      <li>Permettre à votre coach de suivre vos progrès</li>
+      <li>Valider votre abonnement en salle</li>
+      <li>Envoyer des notifications liées à votre programme</li>
+    </ul>
+
+    <h2>6. Base juridique (RGPD)</h2>
+    <ul>
+      <li><strong>Consentement</strong> : notifications push, caméra, données santé</li>
+      <li><strong>Exécution d’un contrat</strong> : suivi lié à l’abonnement Métamorphose</li>
+      <li><strong>Intérêt légitime</strong> : sécurité, prévention des abus (ex. faux reçus)</li>
+    </ul>
+
+    <h2>7. Partage des données</h2>
+    <p>Nous ne vendons pas vos données. Les données sont accessibles uniquement par vous et votre coach. Stockage sécurisé via Supabase (États-Unis).</p>
+
+    <h2>8. Durée de conservation</h2>
+    <p>Vos données sont conservées tant que vous utilisez l’app. Vous pouvez supprimer vos données en supprimant votre compte (voir ci-dessous).</p>
+
+    <h2>9. Suppression du compte</h2>
+    <p>Un bouton “Supprimer mon compte” est disponible dans Profil → Paramètres</p>
+    <ul>
+      <li>Confirmation par mot de passe avant suppression</li>
+      <li>Suppression définitive de toutes vos données de nos serveurs</li>
+    </ul>
+    <p>👉 Aucun contact externe (email ou WhatsApp) n’est nécessaire</p>
+
+    <h2>10. Vos droits</h2>
+    <p>Conformément au RGPD et au CCPA :</p>
+    <ul>
+      <li>Accès à vos données</li>
+      <li>Rectification</li>
+      <li>Suppression (directement dans l’app)</li>
+      <li>Retrait du consentement (par ex. notifications push)</li>
+    </ul>
+
+    <h2>11. Groupe Métamorphose</h2>
+    <p>Les participants aux programmes collectifs sont intégrés à un groupe privé interne (100–150 personnes max). Règles :</p>
+    <ol>
+      <li>Respect et bienveillance</li>
+      <li>Confidentialité</li>
+      <li>Contenu pertinent (sport/nutrition uniquement)</li>
+      <li>Interdiction de publicité personnelle</li>
+    </ol>
+
+    <h2>12. Clause de non-responsabilité</h2>
+    <div class="highlight">
+      Les conseils donnés dans l’app sont informatifs et ne remplacent pas un avis médical. Vous êtes responsable de votre santé.
+    </div>
+
+    <h2>13. Modifications</h2>
+    <p>Nous vous informerons 7 jours avant toute modification majeure via une notification dans l’app.</p>
+
+    <div class="footer">
+      <p>© 2025 Métamorphose SLS. Tous droits réservés.</p>
+      <p><em>Développée par Mohamed AOUFI pour Santé Lifestyle (SLS).</em></p>
+    </div>
   </div>
+
+  <!-- ============ SECTION ANGLAISE ============ -->
+  <div id="en-section" class="lang-section">
+    <h2>1. Introduction</h2>
+    <p>Welcome to <strong>Métamorphose SLS</strong>, a mobile app designed for members of the <strong>Santé Lifestyle (SLS)</strong> gym. The app helps users follow nutrition plans, track progress (weight, photos, measurements), and interact with their coach. This Privacy Policy explains how we collect, use, and protect your personal data.</p>
+
+    <h2>2. Data Controller</h2>
+    <p>Controller: <strong>Mohamed AOUFI</strong> (Métamorphose SLS)<br>
+    📧 Email: <a href="mailto:metamorphosesls@gmail.com">metamorphosesls@gmail.com</a><br>
+    📱 WhatsApp: <a href="https://wa.me/213561630667">+213 561 630 667</a></p>
+
+    <h2>3. Data We Collect</h2>
+    <h3>User-provided data</h3>
+    <ul>
+      <li><strong>Name</strong> (required) – personalization</li>
+      <li><strong>Email address</strong> (required) – authentication and login</li>
+      <li><strong>Age</strong> (optional) – for personalized recommendations</li>
+      <li><strong>Gender</strong> (optional but recommended) – helps tailor nutrition advice (hormonal differences)</li>
+      <li><strong>Phone number</strong> (optional) – only if user wishes to be contacted by coach</li>
+      <li><strong>Métamorphose Group</strong> (required only if user joins a collective program: max. 100–150 members per group) – for private community support</li>
+    </ul>
+
+    <h3>Sensitive data (optional)</h3>
+    <p>Allergies or medical conditions (if provided) – only for nutrition adjustments</p>
+
+    <h3>Technical data</h3>
+    <ul>
+      <li>Device type, OS</li>
+      <li>Notification delivery status (via Firebase Cloud Messaging)</li>
+    </ul>
+    <p>👉 No location data is collected</p>
+
+    <h3>User-generated content</h3>
+    <ul>
+      <li>Profile, meal, and progress photos</li>
+      <li>Gym membership receipts (uploaded via camera/gallery)</li>
+    </ul>
+    <p>👉 Stored securely on Supabase (US servers)<br>👉 Accessible only by the user and their coach</p>
+
+    <h2>4. Permissions Used</h2>
+    <ul>
+      <li><strong>Camera</strong>: to take photos (meals, receipts, profile)</li>
+      <li><strong>Gallery</strong>: to select existing images</li>
+      <li><strong>Push notifications</strong>: reminders and updates</li>
+    </ul>
+
+    <h2>5. Purpose of Processing</h2>
+    <p>Your data is used to:</p>
+    <ul>
+      <li>Provide personalized fitness & nutrition tracking</li>
+      <li>Allow your coach to monitor progress</li>
+      <li>Validate gym membership</li>
+      <li>Send program-related notifications</li>
+    </ul>
+
+    <h2>6. Legal Basis (GDPR)</h2>
+    <ul>
+      <li><strong>Consent</strong>: push notifications, camera, health data</li>
+      <li><strong>Contract execution</strong>: program tracking</li>
+      <li><strong>Legitimate interest</strong>: security & fraud prevention</li>
+    </ul>
+
+    <h2>7. Data Sharing</h2>
+    <p>We do not sell your data. Accessible only by you and your coach. Secure storage on Supabase (USA).</p>
+
+    <h2>8. Data Retention</h2>
+    <p>Your data is retained while you use the app. You may delete it anytime by deleting your account.</p>
+
+    <h2>9. Account Deletion</h2>
+    <p>A “Delete my account” button is available in Profile → Settings</p>
+    <ul>
+      <li>Password confirmation required</li>
+      <li>Data is permanently erased from our servers</li>
+    </ul>
+    <p>👉 No external contact needed</p>
+
+    <h2>10. Your Rights</h2>
+    <p>Under GDPR & CCPA, you can:</p>
+    <ul>
+      <li>Access your data</li>
+      <li>Rectify your data</li>
+      <li>Delete your data (directly in-app)</li>
+      <li>Withdraw consent (e.g. notifications)</li>
+    </ul>
+
+    <h2>11. Métamorphose Group</h2>
+    <p>Users in collective programs are placed in a private internal group (max. 100–150 members). Rules:</p>
+    <ol>
+      <li>Respect & confidentiality</li>
+      <li>Relevant content only (fitness/nutrition)</li>
+      <li>No personal advertising</li>
+    </ol>
+
+    <h2>12. Disclaimer</h2>
+    <div class="highlight">
+      Advice provided in the app is informational only and does not replace medical consultation. You remain responsible for your own health.
+    </div>
+
+    <h2>13. Changes</h2>
+    <p>We will notify you 7 days before major updates via an in-app notification.</p>
+
+    <div class="footer">
+      <p>© 2025 Métamorphose SLS. All rights reserved.</p>
+      <p><em>Developed by Mohamed AOUFI for Santé Lifestyle (SLS).</em></p>
+    </div>
+  </div>
+
+  <!-- ============ SECTION ARABE ============ -->
+  <div id="ar-section" class="lang-section">
+    <h2>1. المقدمة</h2>
+    <p>مرحبًا بك في تطبيق <strong>ميتامورفوز SLS</strong>، وهو تطبيق مصمم لأعضاء صالة الألعاب الرياضية <strong>سانتي لايف ستايل (SLS)</strong>. يساعد التطبيق المستخدمين على متابعة خطط التغذية، وتتبع التقدم (الوزن، الصور، القياسات)، والتفاعل مع المدرب. تشرح سياسة الخصوصية هذه كيفية جمعنا واستخدامنا وحمايتنا لبياناتك الشخصية.</p>
+
+    <h2>2. مسؤول المعالجة</h2>
+    <p>المسؤول: <strong>محمد عوفي</strong> (ميتامورفوز SLS)<br>
+    📧 البريد الإلكتروني: <a href="mailto:metamorphosesls@gmail.com">metamorphosesls@gmail.com</a><br>
+    📱 واتساب: <a href="https://wa.me/213561630667">+213 561 630 667</a></p>
+
+    <h2>3. البيانات التي نجمعها</h2>
+    <h3>البيانات المقدمة من المستخدم</h3>
+    <ul>
+      <li><strong>الاسم</strong> (مطلوب) – لتخصيص التجربة</li>
+      <li><strong>عنوان البريد الإلكتروني</strong> (مطلوب) – للمصادقة وتسجيل الدخول</li>
+      <li><strong>العمر</strong> (اختياري) – لتخصيص بعض التوصيات</li>
+      <li><strong>الجنس</strong> (اختياري لكن موصى به) – لمساعدتك في تخصيص نصائح التغذية المرتبطة بالاختلافات الهرمونية</li>
+      <li><strong>رقم الهاتف</strong> (اختياري) – فقط إذا رغب المستخدم في التواصل مع المدرب</li>
+      <li><strong>مجموعة ميتامورفوز</strong> (مطلوبة فقط للمستخدمين المسجلين في برنامج جماعي: الحد الأقصى 100–150 مشارك لكل مجموعة) – للانضمام إلى مجتمع خاص للمتابعة</li>
+    </ul>
+
+    <h3>البيانات الحساسة (اختيارية)</h3>
+    <p>الحساسيات أو الحالات الطبية (إذا قدمها المستخدم) – تُستخدم فقط لتخصيص توصيات التغذية</p>
+
+    <h3>البيانات التقنية</h3>
+    <ul>
+      <li>نوع الجهاز، نظام التشغيل</li>
+      <li>حالة تسليم إشعارات الدفع (عبر Firebase Cloud Messaging)</li>
+    </ul>
+    <p>👉 لا يتم جمع أي بيانات موقع</p>
+
+    <h3>المحتوى الذي يولده المستخدم</h3>
+    <ul>
+      <li>صور الملف الشخصي، الوجبات، والتقدم</li>
+      <li>إيصالات الاشتراك (مرفوعة عبر الكاميرا أو المعرض)</li>
+    </ul>
+    <p>👉 مخزنة بأمان على Supabase (خوادم الولايات المتحدة)<br>👉 يمكن الوصول إليها فقط من قبل المستخدم ومدربه</p>
+
+    <h2>4. الأذونات المستخدمة</h2>
+    <ul>
+      <li><strong>الكاميرا</strong>: لالتقاط صور (وجبات، إيصالات، ملف شخصي)</li>
+      <li><strong>المعرض</strong>: لاختيار صور موجودة</li>
+      <li><strong>إشعارات الدفع</strong>: للتذكير والتحديثات</li>
+    </ul>
+
+    <h2>5. الغرض من المعالجة</h2>
+    <p>تُستخدم بياناتك من أجل:</p>
+    <ul>
+      <li>توفير متابعة مخصصة للياقة والتغذية</li>
+      <li>تمكين مدربك من مراقبة تقدمك</li>
+      <li>التحقق من اشتراكك في الصالة الرياضية</li>
+      <li>إرسال إشعارات مرتبطة ببرنامجك</li>
+    </ul>
+
+    <h2>6. الأساس القانوني (GDPR)</h2>
+    <ul>
+      <li><strong>الموافقة</strong>: إشعارات الدفع، الكاميرا، البيانات الصحية</li>
+      <li><strong>تنفيذ العقد</strong>: تتبع البرنامج</li>
+      <li><strong>المصلحة المشروعة</strong>: الأمان ومنع الاحتيال</li>
+    </ul>
+
+    <h2>7. مشاركة البيانات</h2>
+    <p>نحن لا نبيع بياناتك. يمكن الوصول إليها فقط من قبلك ومدربك. التخزين الآمن على Supabase (الولايات المتحدة).</p>
+
+    <h2>8. مدة الاحتفاظ بالبيانات</h2>
+    <p>تُحتفظ ببياناتك طالما تستخدم التطبيق. يمكنك حذفها في أي وقت عن طريق حذف حسابك.</p>
+
+    <h2>9. حذف الحساب</h2>
+    <p>زر “حذف حسابي” متوفر في الملف الشخصي → الإعدادات</p>
+    <ul>
+      <li>يتطلب تأكيد كلمة المرور قبل الحذف</li>
+      <li>يتم محو البيانات نهائيًا من خوادمنا</li>
+    </ul>
+    <p>👉 لا حاجة للتواصل الخارجي (بريد إلكتروني أو واتساب)</p>
+
+    <h2>10. حقوقك</h2>
+    <p>وفقًا لـ GDPR وCCPA، يمكنك:</p>
+    <ul>
+      <li>الوصول إلى بياناتك</li>
+      <li>تصحيح بياناتك</li>
+      <li>حذف بياناتك (مباشرة داخل التطبيق)</li>
+      <li>سحب الموافقة (مثل إشعارات الدفع)</li>
+    </ul>
+
+    <h2>11. مجموعة ميتامورفوز</h2>
+    <p>يتم وضع المستخدمين في البرامج الجماعية في مجموعة داخلية خاصة (الحد الأقصى 100–150 عضوًا). القواعد:</p>
+    <ol>
+      <li>الاحترام والسرية</li>
+      <li>المحتوى ذي الصلة فقط (اللياقة/التغذية)</li>
+      <li>ممنوع الإعلان الشخصي</li>
+    </ol>
+
+    <h2>12. إخلاء المسؤولية</h2>
+    <div class="highlight">
+      النصائح المقدمة في التطبيق إعلامية فقط ولا تحل محل الاستشارة الطبية. أنت مسؤول عن صحتك.
+    </div>
+
+    <h2>13. التغييرات</h2>
+    <p>سنخطرك قبل 7 أيام من أي تحديثات كبيرة عبر إشعار داخل التطبيق.</p>
+
+    <div class="footer">
+      <p>© 2025 ميتامورفوز SLS. جميع الحقوق محفوظة.</p>
+      <p><em>تم التطوير بواسطة محمد عوفي لصالح Santé Lifestyle (SLS).</em></p>
+    </div>
+  </div>
+
+  <script>
+    function switchLanguage(lang) {
+      // Masquer toutes les sections
+      document.querySelectorAll('.lang-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      // Désactiver tous les boutons
+      document.querySelectorAll('.lang-switcher button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      // Activer la section et le bouton sélectionné
+      document.getElementById(`${lang}-section`).classList.add('active');
+      document.querySelector(`.lang-switcher button[onclick="switchLanguage('${lang}')"]`).classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
